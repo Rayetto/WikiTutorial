@@ -12,7 +12,9 @@
         <button onclick="cerca()" id="submit" type="submit" value="CERCA"></button>
     </div>
 
+<div id="cacca"></div>
 
+</div>
 
 
 <body>
@@ -20,10 +22,54 @@
 
 <script>
 
-    function cerca(){
-        let textContent = document.getElementById("search").value
-        console.log(textContent)
+let arrayTitoli = [
+  { titolo: 'La storia dei videogiochi', link: 'WikiTutorial/index.html' },
+  { titolo: 'La storia dei cartoni', link: 'WikiTutorial/index2.html' }
+];
+
+function cerca() {
+  let textContent = document.getElementById("search").value;
+
+  textContent = textContent.toLowerCase();
+
+  let filteredContacts = filterFunction(textContent);
+
+  console.log(filteredContacts);
+
+  let divElement = document.getElementById("cacca");
+  divElement.innerHTML = "";
+
+  for (let i = 0; i < filteredContacts.length; i++) {
+    let elementi = document.createElement("a");
+    let link = getLink(filteredContacts[i]);
+    elementi.setAttribute("href", link);
+    elementi.innerHTML = filteredContacts[i];
+    divElement.appendChild(elementi);
+  }
+}
+
+function filterFunction(textContent) {
+  console.log(textContent);
+  let results = [];
+
+  for (let i = 0; i < arrayTitoli.length; i++) {
+    let arraititoli = arrayTitoli[i].titolo;
+
+    if (arraititoli.includes(textContent)) {
+      results.push(arraititoli);
     }
+  }
+
+  return results;
+}
+
+function getLink(titolo) {
+  for (let i = 0; i < arrayTitoli.length; i++) {
+    if (arrayTitoli[i].titolo === titolo) {
+      return arrayTitoli[i].link;
+    }
+  }
+}
 
 </script>
         
