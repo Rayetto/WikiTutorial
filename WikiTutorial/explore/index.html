@@ -7,11 +7,25 @@
 
 </style>
 <body bgcolor= "beige"><FONT style="color: #000000;" face="NT mikella">
-    <form class="modulo-ricerca">
+    <!-- <div class="modulo-ricerca">
         <input id="search" type="text" placeholder="Cerca per..." required>
-        <input id="submit" type="submit" value="CERCA">
-      </form>
+        <button onclick="cerca()" id="submit" type="submit" value="CERCA"></button>
+    </div> -->
+
+    <input id="search" type="text" placeholder="Cerca per..." required>
+    <button onclick="cerca()" id="submit" type="submit" value="CERCA"></button>
+
 <body>
 
+
+<script>
+
+    function cerca(){
+        let textContent = document.getElementById("search").value
+        console.log(textContent)
+    }
+
+</script>
+        
 </body>
 </html>
