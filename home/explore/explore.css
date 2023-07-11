@@ -1,4 +1,9 @@
-
+/*footer 
+  {
+  text-align: center;
+  background-color: rgb(75, 75, 75);
+  color: #cecece;
+  }*/
 .box
   {
   margin: 100px auto;
@@ -10,7 +15,6 @@ p
   {
 		float: left;
     color: #cecece; 
-		margin-left: 30px;
 	}
 img
   {
@@ -84,11 +88,9 @@ img
     height:0.8em;
     background: #353535;
     margin-right: 10px;
-    border-radius: 10px;
     }
 ::-webkit-resizer
     {
-    -webkit-border-radius:10px;
     background-color:#505050;
     border: none;
     }
@@ -96,7 +98,7 @@ img
     {
     min-height:0.8em;
     min-width:0.8em;
-    -webkit-border-radius:10px;
+    -webkit-border-radius:3px;
     background-color: #929292;
     border: none;
     }
@@ -110,3 +112,60 @@ img
     background-color:#cccccc;
     border: none;
     }
+/*---------------search bar---------------*/
+#ricerca {
+  /* Modifica delle dimensioni */
+  width: 350px;
+  height: 40px;
+  /* Personalizzazione dello sfondo */
+  transition: 0.7s;
+  background-color: #313131;
+  border: 3px solid #424242;
+  border-radius: 30px;
+  box-shadow:5px 5px 5px #8383839f;
+  /* Modifica del testo */
+  font-size: 16px;
+  color: #adadad;
+  padding-left:35%;
+}
+
+#ricerca::placeholder {
+  /* Cambia il colore del testo nel placeholder */
+  color: #adadad;
+}
+
+#ricerca:focus::placeholder{
+  /* Cambia il colore del testo nel placeholder */
+  color: #313131;
+}
+
+/* Modifica dello stile del cursore quando si passa sopra la barra di ricerca */
+#ricerca:hover {
+  cursor: pointer;
+}
+
+/* Modifica dello stile del bordo quando la barra di ricerca è in focus */
+#ricerca:focus {
+  transition: 0.7s;
+  padding-left:15px;
+  outline: none;
+  background-color: #cacaca;
+  border: 3px solid #a7a7a7;
+  box-shadow:5px 5px 5px #313131;
+  color: #313131;
+}
+
+/*#risultati{
+  width: 350px;
+  height: 40px;
+  transition: 1s;
+  border:5px solid #bb000000;
+
+  }
+#risultati:focus {
+  width: 350px;
+  height: 40px;
+  transition: 1s;
+  border:5px solid #bb0000;
+  }*/
+

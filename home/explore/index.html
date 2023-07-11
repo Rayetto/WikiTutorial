@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="explore.css">
 <!-- -----------------------titolo con bar dei collegamenti----------------------------------- -->
 <body background="https://a-static.besthdwallpaper.com/pages-of-books-wallpaper-3840x2160-79581_54.jpg"><FONT style="color: #000000;" face="NT mikella">
-	<div style="display: block; background-color: #353535; height:70px; border:5px; border-radius: 15px; font-size:20px;">
+	<div style="display: block; background-color: #353535; height:70px; border:5px; font-size:20px;">
 		<div style="float: left; text-align: left; margin-left: 45px; margin-top: 5px; font-size: 35pt; color: #ffffff;">
 			Wiki tutorial
 		</div>
@@ -70,24 +70,32 @@
 		<!-- ------------------- -->
 	</div>
 <br>
-<!--<div class="box">
-  <div class="container-1">
-      <span class="icon"><i class="fa fa-search"></i></span>
-      <input type="search" id="search" placeholder="Search..." />
-      <button onclick="cerca()" id="submit" type="submit" value="CERCA">
-        Cerca
-      </button>
-  </div>
+
+<div class="box">
+	<div class="container-1">
+		<span class="icon"><i class="fa fa-search"></i></span>
+		<input type="search" id="ricerca" placeholder="Che stai cercando?"/>
+	</div>
+	</div>
+	<div class="box">
+		<div class="container-1">
+			<div id="risultati"></div>
+		</div>
 </div>
-<div id="cacca"></div>-->
 
-<!------------------------------------------------->
-<section class="m-5 p-5">
-    <input type="text" class="border-2 p-2" placeholder="che stai cercando" id="ricerca" >
-    <div id="risultati" class="border-2 p-2"></div>
-    </input>
-</section>
 
+<!-- -----------------------panoramica---------------------------------- -->
+<p style="width: 2000px; text-align: left; float: left; font-size: 30pt; color: #000000;">
+	Un assaggio del nostro sapere
+</p>
+
+<div style="text-align: left; float: left; width: 600px; height: 500px; border: 4px inset #811111; border-radius: 10px; ; font-size: 20pt; color: #000000; margin-top: 5%; margin-left: 3%;">
+	La storia dei videogiochi 
+</div>
+<div style="text-align: left; float: right; width: 600px; height: 500px; border: 4px inset #811111; border-radius: 10px; ; font-size: 20pt; color: #000000; margin-top: 5%; margin-right: 3%;">
+	La storia dei videogiochi 
+</div>
+<!----------------------JavaScript--------------------------->
 <script>
     const input = document.getElementById("ricerca")
     input.addEventListener("keyup", autocomplete)
@@ -147,7 +155,7 @@ function invio(){
 
 </body>
 <!-- -----------------------footer---------------------------------------- -->
-<footer style="margin-top: 40%; background-color: rgb(75, 75, 75)";>
+<footer style="margin-top: 100%; background-color: rgb(75, 75, 75)";>
   <div class="elemento" style="display: block; text-align: left; height: 10px; background-color: #181818; padding: 10px;">
   </div>
   <div class="elemento2" style="display: block; text-align: left; height: 10px; background-color: rgb(53, 53, 53); padding: 10px;">
