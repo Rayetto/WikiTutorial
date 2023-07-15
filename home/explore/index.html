@@ -1,7 +1,9 @@
 <html>
+<!-- -----------------------intestazzione del codice----------------------------------------- -->
 <head>
 	<link rel="icon" type="image/ico" href=" https://rayetto.github.io/favicon.ico">
     <title>WikiTutorial.Explore.com</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 	<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <!-- -----------------------stile css------------------------------------ -->
@@ -70,7 +72,6 @@
 		<!-- ------------------- -->
 	</div>
 <br>
-
 <div class="box">
 	<div class="container-1">
 		<span class="icon"><i class="fa fa-search"></i></span>
@@ -96,94 +97,39 @@
 	La storia dei videogiochi 
 </div>
 <!----------------------JavaScript--------------------------->
-<script>
-    const input = document.getElementById("ricerca")
-    input.addEventListener("keyup", autocomplete)
-    const risultati = document.getElementById("risultati")
-const nomi = [
-    "la storia dei videogiochi",
-    "la storia dei cartoni",
-    "la storia del Mc Donald",
-    "la storia della Coca Cola",
-];
-
-function autocompleteMatch(valore){
-	let valore1 = valore.toLowerCase()
-    if(valore1 == "") return[]
-    const reg = new RegExp(valore1)
-    return nomi.filter(nome => {
-        if(nome.match(reg)) return nome
-    })
-}
-
-function autocomplete(event){
-    let nomiConsigliati = ""
-    const nomi = autocompleteMatch(event.target.value)
-    nomi.forEach((nome)=>{
-        nomiConsigliati += `<li class="hover:bg-gray-200" onclick="seleziona(event)">${nome}</li>`
-    })
-    risultati.innerHTML = `<ul>${nomiConsigliati}</ul>`
-}
-
-function seleziona(event){
-    risultati.innerHTML =""
-    input.value = event.target.textContent
-}
-
-let arrayTitoli = [
-  { titolo: 'la storia dei videogiochi', link: 'https://rayetto.github.io/home/explore/la_storia_dei_videogiochi/index.html' },
-  { titolo: 'la storia dei cartoni', link: 'WikiTutorial/index2.html' }
-];
-
-invio()
-function invio(){
-	document.addEventListener("keyup", function(event) {
-    if (event.keyCode === 13) {
-		let titolo = input.value
-		let min = titolo.toLowerCase()
-		let index = arrayTitoli.findIndex(obj => obj.titolo === min)
-		console.log(index)
-		let link = arrayTitoli[index].link
-		console.log(link)
-		window.location.href = link;
-		console.log(`titolo: ${titolo} min: ${min} index: ${index} link: ${link}`)
-    }
-});
-}
-
-</script>
+<script src="index.js"></script>
 
 </body>
 <!-- -----------------------footer---------------------------------------- -->
 <footer style="margin-top: 100%; background-color: rgb(75, 75, 75)";>
-  <div class="elemento" style="display: block; text-align: left; height: 10px; background-color: #181818; padding: 10px;">
-  </div>
-  <div class="elemento2" style="display: block; text-align: left; height: 10px; background-color: rgb(53, 53, 53); padding: 10px;">
-  </div>
-  <div style="margin-left: 0px; text-align: left; height:400px; padding: 10px;">
-      <p style="text-align: left; font-size: 30px; margin-left: 2.5%; margin-bottom: 0px; color: #cecece;">
-          Wiki Tutorial
-      </p> 
-      <br><br><br><br>
-      <hr style="border:solid #000000 1px; color: #000000; background-color: #000000; height:1px; margin-left: 15px; margin-right: 1000px; border-radius: 15px">
-      <p style="display: block; margin-left: 2%;">
-          Author: Federico Alessandro M.
-          <br>
-          Se vuoi contattarci: 
-          <a href="mailto:lascherd@gmail.com" style="color: #cecece;">
-              lascherd@gmail.com
-          </a>
-          <br><br>
-          La nostra posizione:
-          <br>
-          <a href="https://cdn-icons-png.flaticon.com/512/6615/6615039.png" style="color: #cecece;">
-              ITIS Einstein Bachelet-Via Pasquale II
-          </a>
-      </p>
-      <br><br><br><br>
-      <p style="margin-left: 11%; margin-top: 140px;font-size: 25px;">
-          Follow us:
-      </p>
+    <div class="elemento" style="display: block; text-align: left; height: 10px; background-color: #181818; padding: 10px;">
+    </div>
+    <div class="elemento2" style="display: block; text-align: left; height: 10px; background-color: rgb(53, 53, 53); padding: 10px;">
+    </div>
+    <div style="margin-left: 0px; text-align: left; height:400px; padding: 10px;">
+        <p style="text-align: left; font-size: 30px; margin-left: 2.5%; margin-bottom: 0px; color: #cecece;">
+            Wiki Tutorial
+        </p> 
+        <br><br><br><br>
+        <hr style="border:solid #000000 1px; color: #000000; background-color: #000000; height:1px; margin-left: 15px; margin-right: 1000px; border-radius: 15px">
+        <p style="display: block; margin-left: 2%;">
+            Author: Federico Alessandro M.
+            <br>
+            Se vuoi contattarci: 
+            <a href="mailto:lascherd@gmail.com" style="color: #cecece;">
+                lascherd@gmail.com
+            </a>
+            <br><br>
+            La nostra posizione:
+            <br>
+            <a href="https://cdn-icons-png.flaticon.com/512/6615/6615039.png" style="color: #cecece;">
+                ITIS Einstein Bachelet-Via Pasquale II
+            </a>
+        </p>
+        <br><br><br><br>
+        <p style="margin-left: 11%; margin-top: 140px;font-size: 25px;">
+            Follow us:
+        </p>
 
         <div id="social-bar">
             <a href="https://www.reddit.com/user/Lascherd/" class="reddit" style="margin-left: 10px;"> <i class="fa-brands fa-reddit"></i></a>

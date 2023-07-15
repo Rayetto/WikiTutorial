@@ -1,7 +1,3 @@
-body
-    {
-    background-color: #181818;
-    }
 footer 
     {
     text-align: center;
@@ -31,6 +27,56 @@ b
     color: rgb(72, 112, 163);
     margin-top: 23px;
     }
+/*---------------elementi della barra---------------*/
+a{
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.7s;
+  }
+ul{
+  display:flex;
+  flex-wrap:wrap
+  }
+ul li {
+  margin-top: 1.25em;
+  margin-left: 0.50em;
+  margin-right: 0.75em;
+  }
+ul:hover a {
+  color: #b4b4b4;
+  }
+ul:hover a:hover {
+  color: #3bc0b9;
+  box-shadow: 0 2px 0 0 currentColor;
+  }
+.custom-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.custom-list li:before {
+  content: "";
+}
+/*---------------elemento sfumatura img background---------------*/
+.background-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.background-image::after {
+  content: "";
+  background-image: url("percorso/immagine.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(8px); /* Effetto di sfocatura*/
+  opacity: 0.7; /* Opacità*/
+  z-index: -1;
+  backdrop-filter: blur(8px); /* Effetto di sfocatura per il selettore ::after*/
+}
 /*---------------elemento sfuatura footer---------------*/
 .elemento 
     {    
@@ -50,13 +96,13 @@ b
     }
 /*---------------social---------------*/
 #social-bar {
-    margin-top: 130px;
-    margin-left: 550px;
+    margin-top: 7%;
+    margin-left: 43%;
     height:-webkit-fit-content;
     height:-moz-fit-content;
     height:fit-content;
   }
-  #social-bar a {
+#social-bar a {
     -webkit-transition: 1s;
     -o-transition: 1s;
     transition: 1s;
@@ -66,27 +112,27 @@ b
     text-decoration:none;
     color: white;
   }
-  #social-bar a:hover {
+#social-bar a:hover {
     opacity:0.8;
   }
-  .reddit {
+.reddit {
     float: left;
     background: #bb0000;
     border-radius: 25px;
   }
-  .twitter {
+.twitter {
     float: left;
     background: #55ACEE;
     border-radius: 25px;
   }
-  .instagram {
+.instagram {
     float: left;
     background: #dd2a7b;
     border-radius: 25px;
   }
-  .youtube {
+.discord {
     float: left;
-    background: #bb0000;
+    background: #1618a8;
     border-radius: 25px;
   }
 /*---------------scrollbar---------------*/
